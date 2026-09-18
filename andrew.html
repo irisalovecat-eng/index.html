@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for my boy </title>
+
+    <style>
+        body{
+            background: linear-gradient(to right, pink, lavender);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .card{
+            background: whitesmoke;
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 80px;
+            box-shadow: 0 0 80px rgba(0,0,0,0.2);
+        }
+
+        img{
+            width: 300px;
+            height: 350px;
+            border-radius: 20px;
+        }
+
+        button{
+            background: pink;
+            color: white;
+            border: 2px solid #dda0dd;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        #message{
+            font-size: 20px;
+            margin-top: 15px;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1> For you hehe</h1>
+
+        <img src="https://i.pinimg.com/736x/d7/e2/c2/d7e2c2576131eda7ca73a8599f48d29a.jpg">
+
+        <p> hey cutie. wanna know know something? <3.</p>
+
+        <button onclick="showMessage()">
+            click me!
+        </button>
+
+        <button onclick="givePoints()">
+            if u want kiss click me!  
+        </button>
+
+        <button onclick="randomCatFact()">
+            things i like about u!
+        </button>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function ShowMessage(){
+            document.getElementById("message").innerHTML = "this is my way of showing you how much i care!";
+        }
+
+        function givePoints(){
+            document.getElementById("message").innerHTML = "Andrew received 100 digial kisses muah!"
+
+
+            let points = [
+                "MUAH MUAH !.",
+                "smooch SMOOCH!.",
+                "CHEEK KISS!.",
+                "HUG + KISS!.",
+                "1000 KISSES SENT!.",
+                "MUAH MUAH MUAH MUAH MUAH MUAH MUAH MUAH MUAH MAUH MUAH.",
+            ];
+            
+            let random =
+                Math.floor(Math.random() * points.length);
+            document.getElementById("message").innerHTML = points[random];
+        }
+
+        function randomCatFact(){
+
+            let facts = [
+                " love u!!.",
+                " i love hanging out with my darling.",
+                " i wish i can be ur fav person.",
+                " i love how u make me smile.",
+                " hope u like this website i made for u.",
+            ];
+            
+            let random =
+                Math.floor(Math.random() * facts.length);
+                
+            document.getElementById("message").innerHTML =
+             facts[random];
+        }
+    </script>
+
+</body>
+</html>
